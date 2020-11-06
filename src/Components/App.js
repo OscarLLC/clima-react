@@ -14,8 +14,10 @@ class App extends Component {
     resultado: {}
   }
 
-componentDidUpdate(){
-  this.consultaApi()
+componentDidUpdate(prevProps, prevState){
+  if(prevState.consulta !== this.state.consulta){
+    this.consultaApi();
+  }
 }
 
   componentDidMount(){
@@ -31,7 +33,6 @@ componentDidUpdate(){
     const appId = '35da5f04a128a1dec07d7fb966bbfb9b';
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`
 
-    console.log(url)
     //query con fetch api
     fetch(url)
       .then(respuesta => {
@@ -43,7 +44,6 @@ componentDidUpdate(){
         })
       })
       .catch(error =>{
-        console.log(error)
       })
   } 
 

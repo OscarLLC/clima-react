@@ -58,7 +58,7 @@
 }
 
 .input{
-  height: 25px;
+  height: 35px;
   border-radius: 5px;
   border-style: hidden;
   outline: 0px;
@@ -66,7 +66,7 @@
 }
 
 .select{
-  height: 25px;
+  height: 35px;
     border-radius: 5px;
     border-style: hidden;
     outline: 0px;
@@ -108,6 +108,10 @@
   color: white;
 }
 
+.container{
+  height: 250px;
+}
+
 .content_main_clima{
   display: flex;
   justify-content: center;
@@ -123,15 +127,17 @@
 .content_clima{
   width: 45%;
   margin: 15px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 220px;
   border-radius: 5px;
   background-color: blue;
 }
 
-.text_clima{
+.text_main_clima{
+  color: white;
+  margin: 10px;
+}
+
+.text_temperatura{
   color: white;
 }
 
@@ -157,7 +163,7 @@
 
 @media screen and (max-width: 505px){
   .form{
-    height: 180px;
+    height: 200px;
     display: block;
   }
   .content_input{
@@ -176,7 +182,7 @@
     margin: 15px 0;
   }
   .content_dates{
-    height: 165px;
+    height: 200px;
   }
   .content_clima{
     width: 85%;
