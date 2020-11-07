@@ -31,8 +31,8 @@ componentDidUpdate(prevProps, prevState){
     if(!ciudad || !pais) return null;
 
     const appId = '35da5f04a128a1dec07d7fb966bbfb9b';
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`
-
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`
+    console.log(url)
     //query con fetch api
     fetch(url)
       .then(respuesta => {
