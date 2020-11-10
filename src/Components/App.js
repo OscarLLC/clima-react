@@ -1,7 +1,7 @@
 import '../css/App.css';
 import Header from './Header'
 import Form from './Form';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Error from './Error';
 import Clima from './Clima'
 
@@ -62,7 +62,6 @@ componentDidUpdate(prevProps, prevState){
 
 
   render(){
-
     const error = this.state.error;
     let resultado;
     if(error){
